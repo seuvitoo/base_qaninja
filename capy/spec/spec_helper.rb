@@ -1,6 +1,6 @@
-require 'capybara'
-require 'capybara/rspec'
-require 'selenium-webdriver'
+require "capybara"
+require "capybara/rspec"
+require "selenium-webdriver"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -16,17 +16,14 @@ RSpec.configure do |config|
 end
 
 Capybara.configure do |config|
-
   #alterar configuração conforme navegador deve ser aberto
-
   config.default_driver = :selenium_chrome
-
   #config.default_driver = :selenium_chrome_headless
-  
+
   #usado para o navegador Firefox
   #config.default_driver = :selenium
 
-  config.default_max_wait_time = 15
+  config.default_max_wait_time = 5
   #config.app_host = "https://training-wheels-protocol.herokuapp.com"
   #config.app_host = "httpps://www.google.com.br"
 end
