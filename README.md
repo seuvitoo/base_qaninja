@@ -1,2 +1,2 @@
 Comandos Rspec:
-  rspec -fd --tag @<nome da tag>
+  rspec -fd --tag @*nome da tag*
