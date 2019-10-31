@@ -1,4 +1,4 @@
-describe "login dinamico", :login2, :smoke do
+describe "login dinamico", :login2 do
   before(:each) do
     visit "/login2"
   end
