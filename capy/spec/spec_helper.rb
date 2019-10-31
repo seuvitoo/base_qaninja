@@ -19,10 +19,9 @@ Capybara.configure do |config|
 
   #alterar configuração conforme navegador deve ser aberto
 
-#config.default_driver = :selenium_chrome
+  #config.default_driver = :selenium_chrome
 
   config.default_driver = :selenium_chrome_headless
-  
   
   #usado para o navegador Firefox
   #config.default_driver = :selenium
