@@ -1,5 +1,5 @@
 
-describe "forms" do
+describe "forms", :login1 do
   it "login com sucesso" do
     visit "/login"
 
@@ -36,4 +36,6 @@ describe "forms" do
     expect(find("#flash").visible?).to be true
     expect(find("#flash")).to have_content "O usuário informado não está cadastrado!"
   end
+
+  
 end
