@@ -1,7 +1,7 @@
 
 describe "controle", :controle do
   before(:each) do
-    visit "https://training-wheels-protocol.herokuapp.com/dynamic_controls"
+    visit "/dynamic_controls"
   end
 
   it "habilitando o campo", :hab do
@@ -13,7 +13,7 @@ describe "controle", :controle do
     puts res
 
     click_button "Habilita"
-   
+
     res = page.has_field? "movie", disabled: false
     puts res
   end
