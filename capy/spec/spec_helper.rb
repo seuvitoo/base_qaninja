@@ -15,13 +15,18 @@ RSpec.configure do |config|
   config.include Capybara::DSL
 
   config.before(:example) do
+
     page.current_window.resize_to(1920, 1090)
+
+  
   end
 
   config.after(:example) do |e|
     nome = e.description.gsub(/[^A-Za-z0-9 ]/, "").tr(" ", "_")
     #tirando os acentos e mudando espaços por _
+
     page.save_screenshot("log/" + nome + ".png")#if e.exception
+
   end
 end
 
