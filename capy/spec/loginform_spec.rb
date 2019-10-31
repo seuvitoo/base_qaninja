@@ -1,7 +1,7 @@
 
-describe "forms" do
+describe "forms", :login1 do
   it "login com sucesso" do
-    visit "https://training-wheels-protocol.herokuapp.com/login"
+    visit "/login"
 
     fill_in "username", with: "stark"
     fill_in "password", with: "jarvis!"
@@ -16,7 +16,7 @@ describe "forms" do
   end
 
   it "senha incorreta" do
-    visit "https://training-wheels-protocol.herokuapp.com/login"
+    visit "/login"
 
     fill_in "username", with: "stark"
     fill_in "password", with: "jarvix!"
@@ -27,13 +27,15 @@ describe "forms" do
   end
 
   it "usuário não cadastrado" do
-    visit "https://training-wheels-protocol.herokuapp.com/login"
+    visit "/login"
 
     fill_in "username", with: "starks"
-    fill_in "password", with: "jarvis!" 
+    fill_in "password", with: "jarvis!"
 
     click_button "Login"
     expect(find("#flash").visible?).to be true
     expect(find("#flash")).to have_content "O usuário informado não está cadastrado!"
   end
+
+  
 end

@@ -1,7 +1,7 @@
 
-describe "checkbok", :check do
+describe "checkbok", :check, :smoke do
   before(:each) do
-    visit "https://training-wheels-protocol.herokuapp.com/checkboxes"
+    visit "/checkboxes"
   end
 
   it "marcando uma opção" do

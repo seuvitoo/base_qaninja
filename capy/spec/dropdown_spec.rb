@@ -1,6 +1,6 @@
 describe "caixa de seleção", :dropdown do
   it "Item especifico simples" do
-    visit "https://training-wheels-protocol.herokuapp.com/dropdown"
+    visit "/dropdown"
 
     select("Loki", from: "dropdown")
 
@@ -8,7 +8,7 @@ describe "caixa de seleção", :dropdown do
   end
 
   it "selecionando item especifico com find" do
-    visit "https://training-wheels-protocol.herokuapp.com/dropdown"
+    visit "/dropdown"
 
     armazena = find(".avenger-list")
     armazena.find("option", text: "Tony Stark").select_option
@@ -17,7 +17,7 @@ describe "caixa de seleção", :dropdown do
 
   it "qualquer item", :sample do
     
-    visit "https://training-wheels-protocol.herokuapp.com/dropdown"
+    visit "/dropdown"
 
     armazena = find(".avenger-list")
 
