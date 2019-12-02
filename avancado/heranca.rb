@@ -1,4 +1,4 @@
-class Carro
+class Veiculo
   attr_accessor :nome, :marca, :modelo
 
   def initialize(nome, marca, modelo)
@@ -14,37 +14,31 @@ class Carro
   def buzinar
     puts "Beep! Beep!"
   end
+end
 
+class Carro < Veiculo
   def dirigir
     puts "#{nome} iniciando o trajeto"
   end
-
-class Moto
-    attr_accessor :nome, :marca, :modelo
-
-    def initialize(nome, marca, modelo)
-        self.nome = nome
-        self.marca = marca
-        self.modelo = modelo
-      end
-
 end
 
-
-
-  civic = Carro.new("Civic", "Honda", "s1")
-  civic.ligar
-  civic.buzinar
-  civic.dirigir
-
-  lancer = Carro.new("Lancer", "Mitsubishi", "v1")
-  lancer.ligar
-  lancer.buzinar
-  lancer.dirigir
-
-  fazer = Carro.new ('Fazer', 'Yamaha', '250x')
-  fazer.ligar
-  fazer.buzinar
-  fazer.dirigir
-
+class Moto < Veiculo
+  def pilotar
+    puts "#{nome} iniciando o trajeto"
+  end
 end
+
+civic = Carro.new("Civic", "Honda", "s1")
+civic.ligar
+civic.buzinar
+civic.dirigir
+
+lancer = Carro.new("Lancer", "Mitsubishi", "v1")
+lancer.ligar
+lancer.buzinar
+lancer.dirigir
+
+bis = Moto.new("Bis", "Honda", "150")
+bis.ligar
+bis.buzinar
+bis.pilotar
